@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.0.113:3306/vhr
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      initial-size: 5
+      min-idle: 5
+      max-total: 20
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+  redis:
+    host: 192.168.0.113
+    port: 6379
+    database: 0
+  cache:
+    cache-names: menus_cache
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 192.168.0.113
+    publisher-returns: true
+
+server:
+  port: 8081
